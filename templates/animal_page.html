@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal own page</title>
+</head>
+<body>
+<div class="header__fields">
+    <a href="{{ url_for('hello_world') }}">Home</a>
+</div>
+<div class="wrapper">
+    {% for key, value in animal_item.items() %}
+        {{ key|e }}:{{ value|e }}<br>
+    {% endfor %}
+</div>
+</body>
+</html>
